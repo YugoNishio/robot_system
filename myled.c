@@ -21,8 +21,6 @@ static struct cdev cdv;
 static struct class *cls = NULL;
 static volatile u32 *gpio_base = NULL;
 
-int gpio_pin_list[] = {25, 17};
-
 void sound(int gpio_pin, int sound_time, int no_sound_time) {
 	gpio_base[7] = 1 << gpio_pin;
 	msleep(sound_time);
