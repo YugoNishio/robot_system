@@ -1,3 +1,8 @@
+/*
+ * SPDX-License-Identifer: GPL-3.0
+ * Copyright (c) 2020 Ryuichi Ueda and Yugo Nishio. All rights reserved.
+ */
+
 #include <linux/module.h>
 #include <linux/fs.h>
 #include <linux/cdev.h>
@@ -6,7 +11,7 @@
 #include <linux/io.h>
 #include <linux/delay.h>
 
-MODULE_AUTHOR("Nishio Yugo");
+MODULE_AUTHOR("Ryuichi Ueda and Nishio Yugo");
 MODULE_DESCRIPTION("driver for LED control");
 MODULE_LICENSE("GPL");
 MODULE_VERSION("0.0.1");
@@ -303,7 +308,7 @@ static int __init init_mod(void) {
 	device_create(cls, NULL, dev, NULL, "myled%d",MINOR(dev));
 	gpio_base = ioremap_nocache(0xfe200000, 0xA0);
 
-	const u32 pin = 17;
+	const u32 pin = 25;
 	const u32 index = pin/10;
 	const u32 shift = (pin%10)*3;
 	const u32 mask = ~(0x7<<shift);
