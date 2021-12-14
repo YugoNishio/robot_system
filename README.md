@@ -19,7 +19,7 @@
 ## このまま動かしたい場合
 ### ①  
 ```  
-$ git clone  
+$ git clone https://github.com/YugoNishio/robot_system.git  
 $ cd robot_system  
 ```  
 ### ②  
