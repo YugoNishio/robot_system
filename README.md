@@ -37,3 +37,4 @@ $ sudo rmmod myled
 ```  
 echo 〇 > /dev/myled0  
 ```  
+〇に入る文字は、 a(A)～z(Z), 0～9, !, _ です。  
