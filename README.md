@@ -14,7 +14,7 @@
 ![課題1配線](https://user-images.githubusercontent.com/71488443/145738515-3950397f-6359-453f-9b49-017e2d8fa1a3.png)  
 写真のように、GPIO25番は電子ブザーとLED1つを並列に組んでいます。
 
-# 実行手順  
+# セットアップ手順  
 ## このまま動かしたい場合
 ### ①  
 ```  
@@ -28,7 +28,12 @@ $ sudo insmod myled.ko
 $ sudo chmod 666 /dev/myled0  
 ```  
 ## 変更・改良した場合  
-②を実行する前にこちらをお願いします。
+こちらを実行してから②をお願いします。
 ```  
 $ sudo rmmod myled  
+```  
+
+# 実行手順  
+```  
+echo 〇 > /dev/myled0  
 ```  
