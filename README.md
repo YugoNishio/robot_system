@@ -38,3 +38,7 @@ $ sudo rmmod myled
 echo 〇 > /dev/myled0  
 ```  
 〇に入る文字は、 a(A)～z(Z), 0～9, !, _ です。  
+
+# 実行時の様子  
+画像をクリックしてYouTubeに飛びます。  
+[![サムネ](https://user-images.githubusercontent.com/71488443/145987914-3515dbe5-f8a3-4fe5-92c5-e41671626957.png)](https://www.youtube.com/watch?v=QGr94sr9Y7I)
