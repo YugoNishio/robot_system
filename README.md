@@ -1,5 +1,6 @@
 # 概要  
-ロボットシステム学　デバイスドライバ作成リポジトリ
+こちらはロボットシステム学課題1デバイスドライバ作成のリポジトリです。  
+このデバイスドライバは[ryuichiuedaのデバイスドライバ](https://github.com/ryuichiueda/robosys_device_drivers)を元にモールス信号と三三七拍子を行えるよう作成しました。  
 
 # 用意するもの  
 - Raspberry Pi 4 ModelB   × 1  
