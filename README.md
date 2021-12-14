@@ -15,10 +15,20 @@
 写真のように、GPIO25番は電子ブザーとLED1つを並列に組んでいます。
 
 # 実行手順  
+## このまま動かしたい場合
+### ①  
 ```  
 $ git clone  
 $ cd robot_system  
+```  
+### ②  
+```  
 $ make  
 $ sudo insmod myled.ko  
 $ sudo chmod 666 /dev/myled0  
+```  
+## 変更・改良した場合  
+②を実行する前にこちらをお願いします。
+```  
+$ sudo rmmod myled  
 ```  
