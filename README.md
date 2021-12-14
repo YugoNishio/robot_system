@@ -13,3 +13,12 @@
 # 回路　　
 ![課題1配線](https://user-images.githubusercontent.com/71488443/145738515-3950397f-6359-453f-9b49-017e2d8fa1a3.png)  
 写真のように、GPIO25番は電子ブザーとLED1つを並列に組んでいます。
+
+# 実行手順  
+'''
+git clone 
+cd robot_system
+make
+sudo insmod myled.ko
+sudo chmod 666 /dev/myled0
+'''
