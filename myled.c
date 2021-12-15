@@ -284,6 +284,11 @@ static struct file_operations led_fops = {
 static int __init init_mod(void) {
 
 	int retval;
+	const u32 pin = 25;
+	const u32 index = pin/10;
+	const u32 shift = (pin%10)*3;
+	const u32 mask = ~(0x7<<shift);
+	
 	retval = alloc_chrdev_region(&dev, 0, 1, "myled");
 	printk(KERN_INFO "%s is loaded.\n", __FILE__);
 	if (retval < 0) {
@@ -306,10 +311,6 @@ static int __init init_mod(void) {
 	device_create(cls, NULL, dev, NULL, "myled%d",MINOR(dev));
 	gpio_base = ioremap_nocache(0xfe200000, 0xA0);
 
-	const u32 pin = 25;
-	const u32 index = pin/10;
-	const u32 shift = (pin%10)*3;
-	const u32 mask = ~(0x7<<shift);
 	gpio_base[index] = (gpio_base[index] & mask) | (0x1 << shift);
 	return 0;
 }
